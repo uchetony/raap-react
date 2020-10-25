@@ -1,0 +1,41 @@
+@import '../../../../base/index.scss';
+
+// block
+.button{
+    height: 50px;
+    width: 100%;
+    border-radius: $border-radius-sm;
+    margin-top: $spacing-5;
+    border: none;
+    letter-spacing: $normal-letter-spacing;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-in 0.5s;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+
+    // elements
+    &__text{ 
+        font-size: $font-size-2;
+        letter-spacing: $normal-letter-spacing;
+        line-height: 14px;
+    }
+
+    &__spinner{ margin-left: $spacing-1; }
+
+    // modifiers
+    &_position_center{ margin: auto; }
+
+    &_theme_primary{
+        background-color: $primary-color; color: $grey-color-1;
+    }
+
+    &_border{ border: 1px solid $primary-color-dark; }
+
+    &_width_half{ 
+        @include largeLaptops { width: 40%; }
+    }
+}

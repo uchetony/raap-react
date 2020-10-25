@@ -1,0 +1,83 @@
+@import '../../../../base/index.scss';
+
+// block
+.page-info{
+    &__position_absolute{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+
+        @include largePhones{
+            width: 70%;
+            top: 50%; 
+            left: 15%;
+            transform: translate(-15%, -50%);
+        }
+
+        @include tablets{
+            width: 75%;
+            top: 50%; 
+            left: 10%;
+            transform: translate(-10%, -50%);
+        }
+
+        @include smallLaptops{ width: 55%; }
+
+        @include largeLaptops{ width: 40%; }
+    }
+
+    // elemennts
+    &__logo{
+        height: 40px;
+        margin-bottom: $spacing-2;
+
+        @include tablets{
+            height: 50px;
+            margin-bottom: $spacing-2;
+        }
+    }
+
+    &__text{
+        font-size: $font-size-6;
+        font-weight: $heavy-font-weight;
+        line-height: 36px;
+        color: $grey-color-11;
+        margin: 0;
+        margin-bottom: $spacing-3;
+
+        @include tablets{
+            font-size: $spacing-7; 
+            line-height: 60px;
+        }
+    }
+
+    &__text_center{
+        position: absolute;
+        width: 100%;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__sub-text{
+        margin-top: $spacing-3;
+        margin-bottom: $spacing-6;
+        font-size: $font-size-2;
+        font-weight: $light-font-weight;
+        line-height: 24px;
+
+        @include tablets{
+            font-size: $font-size-4;
+            line-height: 30px;
+        }
+    }
+
+    &__link{ 
+        display: block;
+        text-decoration: none;
+        width: 50%;
+    }
+}

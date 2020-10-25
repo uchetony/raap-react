@@ -1,0 +1,40 @@
+@import '../../base/index.scss';
+
+.dashboard-wrapper{ 
+    position: relative;
+
+    @include smallLaptops { display: flex; }
+
+    .aside{
+        @include smallLaptops{
+            box-sizing: border-box;
+            position: fixed;
+            width: 270px;
+        }
+
+        @include largeLaptops{ width: 300px; }
+    }
+
+    .main{ 
+        background-color: var(--grey-color-4);
+        padding: var(--spacing-4);
+        padding-top: 60px;
+        min-height: 100vh;
+
+        @include smallLaptops{
+            box-sizing: border-box;
+            position: fixed;
+            overflow-y: auto;
+            left: 270px;
+            width: calc(100% - 270px);
+            padding: var(--spacing-4);
+            padding-top: 70px;
+            height: 100%;
+        }
+
+        @include largeLaptops{
+            left: 300px; width: calc(100% - 300px); 
+            padding-left: var(--spacing-6); padding-right: var(--spacing-6); 
+        }
+    }
+}
