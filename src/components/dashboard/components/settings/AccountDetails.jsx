@@ -54,6 +54,7 @@ const AccountDetails = () => {
     const handleInputChange = (e) => {
         const { value, name } = e.target;
         setAccountState({
+            ...accountState,
             accountForm: {
                 ...accountState.accountForm,
                 [name]: { value, required: true }
