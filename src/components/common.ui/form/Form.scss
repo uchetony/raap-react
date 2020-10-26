@@ -32,6 +32,7 @@
         color: $grey-color-10;
         font-size: $font-size-1;
         font-weight: $light-font-weight;
+        cursor: pointer;
 
         &::placeholder{
             color: $accent-color-blue;

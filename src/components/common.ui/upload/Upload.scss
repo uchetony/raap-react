@@ -4,15 +4,68 @@
     margin-top: $spacing-6;
     text-align: center;
 
-    &__alt-pic-text{
-        display: inline-block;
-        font-size: $font-size-5;
+    &__overlay{
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+
+        &-details{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+            color: $grey-color-1;
+
+            &_fadeIn-bottom{ top: 80%; }
+        }
+    }
+
+    &__alt-pic{
+        position: relative;
+        height: 70px;
+        width: 70px;
         background-color: $accent-color-blue;
-        color: $grey-color-1;
-        font-weight: $light-font-weight;
-        padding: $spacing-5;
+        overflow: hidden;
         border-radius: 50%;
         border: 1px solid $accent-color-blue-dark;
+        cursor: pointer;
+        margin: auto;
+
+        &-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: $font-size-5;        
+            color: $grey-color-1;
+            font-weight: $light-font-weight;
+        }
+
+        &:hover{
+            .upload__overlay{ 
+                opacity: 1;
+                &-details{
+                    top: 50%;
+                    left: 50%;
+                    opacity: 1;
+                } 
+            }
+        }
     }
 
     &__title{

@@ -43,6 +43,8 @@
         border: none;
         font-size: $font-size-6;
         cursor: pointer;
+
+        &:hover{ color: $grey-color-6; }
     }
 
     &__check{

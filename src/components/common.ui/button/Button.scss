@@ -7,7 +7,6 @@
     border-radius: $border-radius-sm;
     margin-top: $spacing-5;
     border: none;
-    letter-spacing: $normal-letter-spacing;
     outline: none;
     display: flex;
     justify-content: center;
@@ -15,22 +14,52 @@
     cursor: pointer;
     transition: all ease-in 0.5s;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    transition: all 0.4s;
+    position: relative;
+
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: $border-radius-sm;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &:hover{
+        transform: translateY(-1px);
+        box-shadow: $default-box-shadow;
+
+        &::after{
+            transform: scaleX(1.1) scaleY(1.2);
+            opacity: 0;
+        }
+    }
 
 
     // elements
     &__text{ 
+        letter-spacing: $normal-letter-spacing;
         font-size: $font-size-2;
         letter-spacing: $normal-letter-spacing;
         line-height: 14px;
     }
 
-    &__spinner{ margin-left: $spacing-1; }
+    &__spinner{ margin-left: $spacing-2; }
 
     // modifiers
     &_position_center{ margin: auto; margin-top: $spacing-5; }
 
     &_theme_primary{
         background-color: $primary-color; color: $grey-color-1;
+
+        &::after{
+            background: $primary-color;
+        }
     }
 
     &_border{ border: 1px solid $primary-color-dark; }

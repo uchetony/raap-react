@@ -12,7 +12,7 @@ const SubmitButton = (props) => {
                 { (type === 'submit' && isSubmitting) ? 
                     <React.Fragment>
                         <span className="button__text"> {submittingText} </span>
-                        <span className="button__spinner"> <FontAwesomeIcon icon="spinner" spin /> </span>
+                        <span className="button__spinner"> <FontAwesomeIcon icon="spinner" spin/> </span>
                     </React.Fragment>
                     : <span className="button__text"> {text} </span>
                 }

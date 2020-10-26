@@ -32,6 +32,7 @@ const Dashboard = ({match, location}) => {
                         <Route exact path={path} render={() => <Redirect to={`${path}/settings/account-details`} /> } />
                         <Route exact path={`${path}/settings/account-details`} render={(props) => <AccountDetails {...props} />} />
                         <Route exact path={`${comingSoonPaths[comingSoonPaths.indexOf(location.pathname)]}`} render={() =>  <ComingSoon /> } />
+                        <Route path="*" render={() => <Redirect to="/404" /> } />
                     </Switch>
                 </div>
             </main>

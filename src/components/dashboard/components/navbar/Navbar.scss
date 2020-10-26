@@ -114,6 +114,9 @@
             position: relative;
             -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
             padding: 0 $spacing-4;
+            color: $accent-color-blue;
+
+            &:hover{ .desktop-navbar__link-text{ color: $accent-color-blue; } }
         }
 
         @include largeLaptops{ padding: 0 $spacing-6; }
