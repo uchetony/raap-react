@@ -4,7 +4,7 @@ import './Dashboard.scss';
 import Navbar from './components/navbar/Navbar';
 import AccountDetails from './components/settings/AccountDetails';
 import Sidebar from './components/sidebar/Sidebar';
-import ComingSoon from '../common.ui/components/coming-soon/ComingSoon';
+import ComingSoon from '../common.ui/coming-soon/ComingSoon';
 
 const Dashboard = ({match, location}) => {
     const { path } = match;

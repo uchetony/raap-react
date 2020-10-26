@@ -1,0 +1,56 @@
+@import '../../../base/index.scss';
+
+.section{ 
+    padding-top: $spacing-5;
+    // background-color: blue;
+
+    @include smallLaptops{ padding-top: 0; }
+
+    &__header{
+        font-size: $font-size-4;
+        font-weight: $normal-font-weight;
+        color: $grey-color-11;
+        margin: 0;
+
+        &_size_md{
+            @include largeLaptops{ display: none; }
+        }
+
+        &-decoration{
+            height: 5px;
+            background-color: $primary-color;
+            border-radius: 1px;
+            width: 35px;
+            margin: 0;
+            border: none;
+        }
+    }
+    
+    &__element{ 
+        margin: $spacing-5 0;
+
+        @include tablets{
+            padding: 0;
+            margin: 0;
+            width: calc((100% - (2 * $spacing-4)) / 2);
+        }
+
+        @include smallLaptops{  
+            padding: 0;
+            margin: 0;
+            width: 48%;
+        }
+
+        &-holder{
+            @include tablets{
+                display: flex;
+                justify-content: space-between;
+                margin-top: $spacing-5;
+            }
+
+            @include smallLaptops{ margin-top: $spacing-4; }
+
+            @include largeLaptops{ margin-top: $spacing-6 }
+        }
+    }
+}

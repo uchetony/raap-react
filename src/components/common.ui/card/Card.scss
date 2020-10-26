@@ -1,0 +1,47 @@
+@import '../../../base/index.scss';
+
+.card{
+    margin: 0;
+    background-color: $grey-color-1;
+    border-radius: $border-radius-sm;
+
+    &__top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $grey-color-5;
+        padding: $spacing-4 0;
+    }
+
+    &__header{
+        font-size: $font-size-3;
+        font-weight: $light-font-weight;
+        line-height: 24px;
+        color: $grey-color-11;
+        margin: 0;
+    }
+
+    &__body{
+        padding: $spacing-4;
+        padding-top: 0;
+        padding-bottom: $spacing-6;
+
+        @include largePhones{
+            padding: $spacing-7;
+            padding-top: 0;
+            padding-bottom: $spacing-6;
+        }
+
+        @include tablets{
+            padding: $spacing-4;
+            padding-top: 0;
+            padding-bottom: $spacing-6;
+        }
+
+        @include largeLaptops{
+            padding: $spacing-5;
+            padding-top: 0;
+            padding-bottom: $spacing-6;
+        }
+    }
+}

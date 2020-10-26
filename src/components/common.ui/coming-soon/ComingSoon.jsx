@@ -1,6 +1,6 @@
 import React from 'react'
 import PageInfo from '../page-info/PageInfo'
-import WithTitle from '../../../../hoc/WithTitle'
+import WithTitle from '../../../hoc/WithTitle'
 
 const ComingSoon = () => {
     return (
@@ -8,7 +8,7 @@ const ComingSoon = () => {
             <PageInfo>
                 <div className="page-info">
                     <h1 className="page-info__text page-info__text_center">
-                        Cooming soon!
+                        Coming soon!
                     </h1>
                 </div>
             </PageInfo>

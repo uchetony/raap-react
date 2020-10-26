@@ -87,7 +87,21 @@
             margin: 0;
             height: 100%;
             display: flex;
+            align-items: center;
         }
+
+        &-header{
+            @include smallLaptops{ 
+                margin: 0 $spacing-4; font-weight: $light-font-weight;
+                font-size: $font-size-4;
+            }
+
+            @include largeLaptops{ margin: 0 $spacing-6; }
+        }
+    }
+
+    &__list{
+        @include smallLaptops{ height: 100%; }
     }
 
     &__link{
@@ -123,6 +137,4 @@
             }
         }
     }
-
-
 }

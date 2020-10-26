@@ -1,4 +1,4 @@
-@import '../../../../base/index.scss';
+@import '../../../base/index.scss';
 
 // block
 .button{
@@ -27,7 +27,7 @@
     &__spinner{ margin-left: $spacing-1; }
 
     // modifiers
-    &_position_center{ margin: auto; }
+    &_position_center{ margin: auto; margin-top: $spacing-5; }
 
     &_theme_primary{
         background-color: $primary-color; color: $grey-color-1;

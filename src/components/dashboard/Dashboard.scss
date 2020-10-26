@@ -16,8 +16,8 @@
     }
 
     .main{ 
-        background-color: var(--grey-color-4);
-        padding: var(--spacing-4);
+        background-color: $grey-color-4;
+        padding: $spacing-4;
         padding-top: 60px;
         min-height: 100vh;
 
@@ -27,14 +27,14 @@
             overflow-y: auto;
             left: 270px;
             width: calc(100% - 270px);
-            padding: var(--spacing-4);
+            padding: $spacing-4;
             padding-top: 70px;
             height: 100%;
         }
 
         @include largeLaptops{
             left: 300px; width: calc(100% - 300px); 
-            padding-left: var(--spacing-6); padding-right: var(--spacing-6); 
+            padding-left: $spacing-6; padding-right: $spacing-6; 
         }
     }
 }

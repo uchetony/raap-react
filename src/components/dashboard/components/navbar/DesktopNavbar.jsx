@@ -29,7 +29,9 @@ const DesktopNavbar = ({path, location}) => {
     const beneficiariesNavbar = () => {
         return (
             <React.Fragment>
-                <h3>beneficiaries</h3>
+                <h3 className="desktop-navbar__list-holder-header">
+                    Beneficiaries
+                </h3>
             </React.Fragment>
         )
     }
@@ -37,7 +39,9 @@ const DesktopNavbar = ({path, location}) => {
     const requestNavbar = () => {
         return (
             <React.Fragment>
-                <h3>request</h3>
+                <h3 className="desktop-navbar__list-holder-header">
+                    Request
+                </h3>
             </React.Fragment>
         )
     }

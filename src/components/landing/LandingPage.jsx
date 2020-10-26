@@ -2,8 +2,8 @@ import React from 'react'
 import WithTitle from '../../hoc/WithTitle';
 import logo from '../../static/images/logo.png'
 import { Link } from 'react-router-dom';
-import Button from '../common.ui/components/button/Button';
-import PageInfo from '../common.ui/components/page-info/PageInfo';
+import Button from '../common.ui/button/Button';
+import PageInfo from '../common.ui/page-info/PageInfo';
 
 const LandingPage = (props) => {
     return (

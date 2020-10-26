@@ -1,0 +1,41 @@
+@import '../../../base/index.scss';
+
+.upload{
+    margin-top: $spacing-6;
+    text-align: center;
+
+    &__alt-pic-text{
+        display: inline-block;
+        font-size: $font-size-5;
+        background-color: $accent-color-blue;
+        color: $grey-color-1;
+        font-weight: $light-font-weight;
+        padding: $spacing-5;
+        border-radius: 50%;
+        border: 1px solid $accent-color-blue-dark;
+    }
+
+    &__title{
+        font-size: $font-size-2;
+        margin-top: $spacing-5;
+        font-weight: $normal-font-weight;
+        color: $grey-color-11;
+    }
+
+    &__instruction{
+        display: block;
+        font-size: 11px;
+        margin-top: $spacing-4;
+        margin-bottom: $spacing-1;
+        color: $grey-color-8;
+        line-height: 18px;
+        font-weight: $light-font-weight;
+
+        @include largeLaptops{
+            margin-bottom: $spacing-6;
+            padding: 0 7%;
+            line-height: 20px;
+            font-size: $font-size-1;
+        }
+    }
+}

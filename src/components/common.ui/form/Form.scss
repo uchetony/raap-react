@@ -1,0 +1,62 @@
+@import '../../../base/index.scss';
+
+.form{
+
+    &__section{
+        /* background-color: black; */
+        margin-top: $spacing-5;
+        margin-bottom: $spacing-1;
+
+        &-top{
+            /* background-color: blue; */
+            margin-bottom: $spacing-3;
+        }
+
+        &-header{
+            font-size: $font-size-3;
+            line-height: 19px;
+            font-weight: $normal-font-weight;
+            color: $grey-color-10;
+        }
+    }
+
+    &__input{
+        box-sizing: border-box;
+        width: 100%;
+        background-color: $grey-color-3;
+        border: 1px solid $grey-color-6;
+        border-radius: $border-radius-sm;
+        height: 50px;
+        margin: $spacing-2 0;
+        padding: 0 $spacing-4;
+        color: $grey-color-10;
+        font-size: $font-size-1;
+        font-weight: $light-font-weight;
+
+        &::placeholder{
+            color: $accent-color-blue;
+            font-size: $font-size-1;
+            font-weight: $light-font-weight;
+        }
+
+        &:focus{
+            background-color: $grey-color-1;
+            outline-color: $accent-color-blue;
+            outline-width: 1px;
+
+            &::placeholder{
+                color: $grey-color-10;   
+            }
+        }
+
+        &_big-screen-pair{
+
+            @include largeLaptops{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: $spacing-5;
+            }
+            
+        }
+    }
+}
