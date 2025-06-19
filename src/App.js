@@ -8,7 +8,7 @@ function App({ children }) {
     return (
       <div className="App">
         {/* Application providers go here */}
-        {children}
+        <BrowserRouter>{children}</BrowserRouter>
       </div>
     );
   }

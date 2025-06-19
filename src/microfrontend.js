@@ -1,13 +1,14 @@
 import React from "react";
 import App from "./App";
-
+import AccountDetails from "./components/dashboard/components/settings/AccountDetails";
 
 const MICROFRONTEND_RENDER_MESSAGE_MAP = {
-  RENDER_RANDOM_MICRO_FRONTEND: {
-    elementId: "random-micro-frontend",
+  RENDER_ACCOUNT_DETAILS_MICRO_FRONTEND: {
+    elementId: "account-details-micro-frontend",
     render: () => (
       <App>
-        Hello from Random Microfrontend
+        Acount Details Mircofrontend
+        <AccountDetails />
       </App>
     ),
   },
